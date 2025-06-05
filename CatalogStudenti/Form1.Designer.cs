@@ -61,6 +61,7 @@
             this.AutontificationFailed = new System.Windows.Forms.TextBox();
             this.btnAddCourse = new System.Windows.Forms.Button();
             this.listBoxCourses = new System.Windows.Forms.ListBox();
+            this.SaveMdf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +112,7 @@
             this.Cautare.TabIndex = 4;
             this.Cautare.Text = "Cautare";
             this.Cautare.UseVisualStyleBackColor = true;
+            this.Cautare.Click += new System.EventHandler(this.Cautare_Click);
             // 
             // username
             // 
@@ -144,6 +146,7 @@
             this.SearchText.Name = "SearchText";
             this.SearchText.Size = new System.Drawing.Size(211, 20);
             this.SearchText.TabIndex = 8;
+            this.SearchText.TextChanged += new System.EventHandler(this.SearchText_TextChanged);
             // 
             // Afiseaza
             // 
@@ -161,6 +164,7 @@
             this.StudentName.Name = "StudentName";
             this.StudentName.Size = new System.Drawing.Size(267, 20);
             this.StudentName.TabIndex = 10;
+            this.StudentName.TextChanged += new System.EventHandler(this.StudentName_TextChanged);
             // 
             // BirthDate
             // 
@@ -168,6 +172,8 @@
             this.BirthDate.Name = "BirthDate";
             this.BirthDate.Size = new System.Drawing.Size(267, 20);
             this.BirthDate.TabIndex = 11;
+            this.BirthDate.TextChanged += new System.EventHandler(this.BirthDate_TextChanged);
+            this.BirthDate.Leave += new System.EventHandler(this.BirthDate_Leave);
             // 
             // YearOfStudying
             // 
@@ -297,12 +303,13 @@
             // 
             // DeleteBtn
             // 
-            this.DeleteBtn.Location = new System.Drawing.Point(384, 537);
+            this.DeleteBtn.Location = new System.Drawing.Point(12, 76);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(75, 23);
             this.DeleteBtn.TabIndex = 28;
             this.DeleteBtn.Text = "Stergere";
             this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // ModifyBtn
             // 
@@ -349,11 +356,22 @@
             this.listBoxCourses.Size = new System.Drawing.Size(213, 212);
             this.listBoxCourses.TabIndex = 33;
             // 
+            // SaveMdf
+            // 
+            this.SaveMdf.Location = new System.Drawing.Point(363, 499);
+            this.SaveMdf.Name = "SaveMdf";
+            this.SaveMdf.Size = new System.Drawing.Size(75, 23);
+            this.SaveMdf.TabIndex = 34;
+            this.SaveMdf.Text = "Salveaza Modificarile";
+            this.SaveMdf.UseVisualStyleBackColor = true;
+            this.SaveMdf.Click += new System.EventHandler(this.SaveMdf_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(806, 618);
+            this.Controls.Add(this.SaveMdf);
             this.Controls.Add(this.listBoxCourses);
             this.Controls.Add(this.btnAddCourse);
             this.Controls.Add(this.AutontificationFailed);
@@ -431,6 +449,7 @@
         private System.Windows.Forms.TextBox AutontificationFailed;
         private System.Windows.Forms.Button btnAddCourse;
         private System.Windows.Forms.ListBox listBoxCourses;
+        private System.Windows.Forms.Button SaveMdf;
     }
 }
 

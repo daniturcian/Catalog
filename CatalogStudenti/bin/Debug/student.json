@@ -41,32 +41,6 @@
     ]
   },
   {
-    "Name": "Vasile",
-    "Birthdate": "1995-12-12T00:00:00",
-    "YearOfStudying": 3,
-    "Group": "A",
-    "Courses": [
-      {
-        "CourseName": "Muzica",
-        "Grade": 4,
-        "CreditNumber": 2
-      }
-    ]
-  },
-  {
-    "Name": "Ionica",
-    "Birthdate": "1995-12-02T00:00:00",
-    "YearOfStudying": 2,
-    "Group": "Grupa3.2",
-    "Courses": [
-      {
-        "CourseName": "PC",
-        "Grade": 6,
-        "CreditNumber": 2
-      }
-    ]
-  },
-  {
     "Name": "Semida",
     "Birthdate": "1996-03-13T00:00:00",
     "YearOfStudying": 2,
@@ -81,13 +55,13 @@
   },
   {
     "Name": "Dan",
-    "Birthdate": "1222-12-12T00:00:00",
-    "YearOfStudying": 4,
-    "Group": "A",
+    "Birthdate": "1333-12-21T00:00:00",
+    "YearOfStudying": 2,
+    "Group": "GrB",
     "Courses": [
       {
         "CourseName": "MachineLearning",
-        "Grade": 10,
+        "Grade": 5,
         "CreditNumber": 5
       }
     ]
@@ -112,27 +86,53 @@
   },
   {
     "Name": "Chivu",
-    "Birthdate": "1222-12-12T00:00:00",
-    "YearOfStudying": 4,
+    "Birthdate": "1994-03-14T00:00:00",
+    "YearOfStudying": 3,
     "Group": "A",
     "Courses": [
       {
-        "CourseName": "Algebra",
+        "CourseName": "Fizica",
+        "Grade": 7,
+        "CreditNumber": 3
+      }
+    ]
+  },
+  {
+    "Name": "Ilie Dumitrescu",
+    "Birthdate": "1974-11-20T00:00:00",
+    "YearOfStudying": 4,
+    "Group": "F",
+    "Courses": [
+      {
+        "CourseName": "Fotbal",
         "Grade": 9,
         "CreditNumber": 3
       }
     ]
   },
   {
-    "Name": "Dica",
-    "Birthdate": "1231-12-21T00:00:00",
-    "YearOfStudying": 2,
-    "Group": "AB",
+    "Name": "Gicu Grozav",
+    "Birthdate": "1234-12-12T00:00:00",
+    "YearOfStudying": 3,
+    "Group": "A",
     "Courses": [
       {
-        "CourseName": "Algebra",
-        "Grade": 7,
-        "CreditNumber": 3
+        "CourseName": "Fizica",
+        "Grade": 10,
+        "CreditNumber": 2
+      }
+    ]
+  },
+  {
+    "Name": "Aurel Iancu",
+    "Birthdate": "1234-12-11T00:00:00",
+    "YearOfStudying": 1,
+    "Group": "A",
+    "Courses": [
+      {
+        "CourseName": "PC",
+        "Grade": 5,
+        "CreditNumber": 5
       }
     ]
   }

@@ -1,2 +1,2 @@
 semidaturcian@gmail.com,1234
-a,12
+a@upt.ro,12

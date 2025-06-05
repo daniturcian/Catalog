@@ -11,5 +11,31 @@
         "CreditNumber": 2
       }
     ]
+  },
+  {
+    "Name": "a",
+    "Birthdate": "1233-11-11T00:00:00",
+    "YearOfStudying": 2,
+    "Group": "A",
+    "Courses": [
+      {
+        "CourseName": "Istorie",
+        "Grade": 5,
+        "CreditNumber": 4
+      }
+    ]
+  },
+  {
+    "Name": "a",
+    "Birthdate": "1234-12-11T00:00:00",
+    "YearOfStudying": 2,
+    "Group": "2",
+    "Courses": [
+      {
+        "CourseName": "ttttt",
+        "Grade": 2,
+        "CreditNumber": 2
+      }
+    ]
   }
 ]

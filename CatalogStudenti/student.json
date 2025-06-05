@@ -1,3 +1,121 @@
-{
-
-}
+[
+  {
+    "Name": "Matei",
+    "Birthdate": "2002-05-12T00:00:00",
+    "YearOfStudying": 2,
+    "Group": "GrupaA",
+    "Courses": [
+      {
+        "CourseName": "Matematica",
+        "Grade": 9,
+        "CreditNumber": 5
+      },
+      {
+        "CourseName": "Fizica",
+        "Grade": 8,
+        "CreditNumber": 4
+      },
+      {
+        "CourseName": "Chimie",
+        "Grade": 10,
+        "CreditNumber": 3
+      }
+    ]
+  },
+  {
+    "Name": "Ioana",
+    "Birthdate": "2001-11-03T00:00:00",
+    "YearOfStudying": 3,
+    "Group": "GrupaB",
+    "Courses": [
+      {
+        "CourseName": "Matematica",
+        "Grade": 7,
+        "CreditNumber": 5
+      },
+      {
+        "CourseName": "Programare",
+        "Grade": 9,
+        "CreditNumber": 3
+      }
+    ]
+  },
+  {
+    "Name": "Semida",
+    "Birthdate": "1996-03-13T00:00:00",
+    "YearOfStudying": 2,
+    "Group": "2.2",
+    "Courses": [
+      {
+        "CourseName": "MTP",
+        "Grade": 10,
+        "CreditNumber": 5
+      }
+    ]
+  },
+  {
+    "Name": "Dan",
+    "Birthdate": "1333-12-21T00:00:00",
+    "YearOfStudying": 2,
+    "Group": "GrB",
+    "Courses": [
+      {
+        "CourseName": "MachineLearning",
+        "Grade": 5,
+        "CreditNumber": 5
+      }
+    ]
+  },
+  {
+    "Name": "Chivu",
+    "Birthdate": "1994-03-14T00:00:00",
+    "YearOfStudying": 3,
+    "Group": "A",
+    "Courses": [
+      {
+        "CourseName": "Fizica",
+        "Grade": 7,
+        "CreditNumber": 3
+      }
+    ]
+  },
+  {
+    "Name": "Ilie Dumitrescu",
+    "Birthdate": "1974-11-20T00:00:00",
+    "YearOfStudying": 4,
+    "Group": "F",
+    "Courses": [
+      {
+        "CourseName": "Fotbal",
+        "Grade": 9,
+        "CreditNumber": 3
+      }
+    ]
+  },
+  {
+    "Name": "Gicu Grozav",
+    "Birthdate": "1234-12-12T00:00:00",
+    "YearOfStudying": 3,
+    "Group": "A",
+    "Courses": [
+      {
+        "CourseName": "Fizica",
+        "Grade": 10,
+        "CreditNumber": 2
+      }
+    ]
+  },
+  {
+    "Name": "Aurel Iancu",
+    "Birthdate": "1234-12-11T00:00:00",
+    "YearOfStudying": 1,
+    "Group": "A",
+    "Courses": [
+      {
+        "CourseName": "PC",
+        "Grade": 5,
+        "CreditNumber": 5
+      }
+    ]
+  }
+]

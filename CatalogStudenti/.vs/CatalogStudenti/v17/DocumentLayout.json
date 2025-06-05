@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UPT\\Semida\\CatalogStudenti\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|d:\\upt\\semida\\catalogstudenti\\utilities\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|solutionrelative:utilities\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|d:\\upt\\semida\\catalogstudenti\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|d:\\upt\\semida\\catalogstudenti\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|D:\\UPT\\Semida\\CatalogStudenti\\auth.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|solutionrelative:auth.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|D:\\UPT\\Semida\\CatalogStudenti\\utilities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|solutionrelative:utilities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|d:\\upt\\semida\\catalogstudenti\\student.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|solutionrelative:student.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|D:\\UPT\\Semida\\CatalogStudenti\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|D:\\UPT\\Semida\\CatalogStudenti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAAFB2B-1262-4618-A878-4F8D2659CEB7}|CatalogStudenti.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 253,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\UPT\\Semida\\CatalogStudenti\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "D:\\UPT\\Semida\\CatalogStudenti\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwC4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T21:56:13.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "auth.txt",
+              "DocumentMoniker": "D:\\UPT\\Semida\\CatalogStudenti\\auth.txt",
+              "RelativeDocumentMoniker": "auth.txt",
+              "ToolTip": "D:\\UPT\\Semida\\CatalogStudenti\\auth.txt",
+              "RelativeToolTip": "auth.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-06-04T20:14:41.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Util.cs",
+              "DocumentMoniker": "D:\\UPT\\Semida\\CatalogStudenti\\Utilities\\Util.cs",
+              "RelativeDocumentMoniker": "Utilities\\Util.cs",
+              "ToolTip": "D:\\UPT\\Semida\\CatalogStudenti\\Utilities\\Util.cs",
+              "RelativeToolTip": "Utilities\\Util.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T20:43:34.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UPT\\Semida\\CatalogStudenti\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\UPT\\Semida\\CatalogStudenti\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:06:38.473Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 336,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "student.json",
+              "DocumentMoniker": "D:\\UPT\\Semida\\CatalogStudenti\\student.json",
+              "RelativeDocumentMoniker": "student.json",
+              "ToolTip": "D:\\UPT\\Semida\\CatalogStudenti\\student.json",
+              "RelativeToolTip": "student.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-05T20:25:54.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\UPT\\Semida\\CatalogStudenti\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\UPT\\Semida\\CatalogStudenti\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAALQBAAAAAAAAAAAwwO0BAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:07:00.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\UPT\\Semida\\CatalogStudenti\\Utilities\\Student.cs",
+              "RelativeDocumentMoniker": "Utilities\\Student.cs",
+              "ToolTip": "D:\\UPT\\Semida\\CatalogStudenti\\Utilities\\Student.cs",
+              "RelativeToolTip": "Utilities\\Student.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T20:34:00.54Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "875923e5-c0ed-4ce7-8517-f45c5ebacd2a",
+        "Display": 1,
+        "X": 453,
+        "Y": 125,
+        "Width": 955,
+        "Height": 820,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\UPT\\Semida\\CatalogStudenti\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\UPT\\Semida\\CatalogStudenti\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T20:10:21.751Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

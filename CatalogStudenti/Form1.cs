@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using CatalogStudenti.Utilities;
 using System.IO;
 using Newtonsoft.Json;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace CatalogStudenti
 {
@@ -50,14 +52,13 @@ namespace CatalogStudenti
             ModifyBtn.Visible = false;
             btnAddCourse.Visible = false;
             listBoxCourses.Visible = false;
-            Converter.ConvertTxtToJson("student.txt", "student.json");
-
+            SaveMdf.Visible = false;
         }
 
         private void Afiseaza_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = true;
-            Afiseaza.Visible = false;
+            Afiseaza.Visible = true;
             StudentName.Visible = false;
             BirthDate.Visible = false;
             YearOfStudying.Visible = false;
@@ -77,8 +78,10 @@ namespace CatalogStudenti
             ModifyBtn.Visible = true;
             btnAddCourse.Visible = false;
             listBoxCourses.Visible = false;
+            Stergere.Visible = true;
+            SaveMdf.Visible = false;
 
-            var students = Util.LoadStudentData("student.json");
+            var students = Util.LoadStudentData(@"D:\\UPT\\Semida\\CatalogStudenti\\student.json");
                 DisplayInGrid(students);
             
 
@@ -107,11 +110,21 @@ namespace CatalogStudenti
             DeleteBtn.Visible = false;
             ModifyBtn.Visible = true;
             btnAddCourse.Visible = true;
+            Stergere.Visible = true;
+            SaveMdf.Visible = false;
 
         }
 
         private void Autentificare_Click(object sender, EventArgs e)
         {
+            string userEmail = username.Text.Trim();
+
+            // Validare email
+            if (!Util.ValideazaUsername(userEmail))
+            {
+                MessageBox.Show("Email invalid! Trebuie să fie @gmail.com sau @upt.ro");
+                return;
+            }
             if (Util.Authenticate(username.Text, password.Text))
             {
                 username.Visible = false;
@@ -149,7 +162,7 @@ namespace CatalogStudenti
         private void Stergere_Click(object sender, EventArgs e)
         {
 
-            materie.Visible = false;
+            materie.Visible = true;
             notaluata.Visible = false;
             nrcredite.Visible = false;
             SaveBtn.Visible = false;
@@ -164,9 +177,9 @@ namespace CatalogStudenti
             Afiseaza.Visible = true;
             StudentName.Visible = false;
             BirthDate.Visible = false;
-            YearOfStudying.Visible = false;
+            YearOfStudying.Visible = true;
             Group.Visible = false;
-            NumeCurs.Visible = false;
+            NumeCurs.Visible = true;
             Nota.Visible = false;
             NumarCredite.Visible = false;
             DeleteBtn.Visible = true;
@@ -180,6 +193,9 @@ namespace CatalogStudenti
             anuldestudiu.Visible = true;
             grupa.Visible = true;
             listBoxCourses.Visible = false;
+            SaveMdf.Visible = false;
+
+
         }
 
         private void ModifyBtn_Click(object sender, EventArgs e)
@@ -200,48 +216,18 @@ namespace CatalogStudenti
             materie.Visible = true;
             notaluata.Visible = true;
             nrcredite.Visible = true;
-            SaveBtn.Visible = true;
+            SaveBtn.Visible = false;
             DeleteBtn.Visible = false;
             ModifyBtn.Visible = true;
             listBoxCourses.Visible = false;
+            Stergere.Visible = true;
+            SaveMdf.Visible = true;
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            //        string name = StudentName.Text.Trim();
-            //        string birthDateStr = BirthDate.Text.Trim();
-            //        string group = Group.Text.Trim();
-
-            //        if (!DateTime.TryParse(birthDateStr, out DateTime birthDate) ||
-            //            !int.TryParse(YearOfStudying.Text.Trim(), out int yearOfStudying))
-            //        {
-            //            MessageBox.Show("Check student info format.");
-            //            return;
-            //        }
-
-            //        if (tempCourses.Count == 0)
-            //        {
-            //            MessageBox.Show("Add at least one course.");
-            //            return;
-            //        }
-
-            //        List<string> linesToAppend = new List<string>
-
-            //{
-            //    $"{name},{birthDate:yyyy-MM-dd},{yearOfStudying},{group}"
-            //};
-
-            //        foreach (var course in tempCourses)
-            //        {
-            //            linesToAppend.Add($"{course.CourseName},{course.Grade},{course.CreditNumber}");
-            //        }
-
-            //        linesToAppend.Add(""); // Empty line to separate students
-
-            //        File.AppendAllLines(@"D:\UPT\Semida\CatalogStudenti\student.txt", linesToAppend);
-
-            //        MessageBox.Show("Student and courses saved.");
-            var students = Util.LoadStudentData("students.json");
+            
+            var students = Util.LoadStudentData(@"D:\\UPT\\Semida\\CatalogStudenti\\student.json");
 
             var newStudent = new Student
             {
@@ -253,7 +239,8 @@ namespace CatalogStudenti
             };
 
             students.Add(newStudent);
-            Util.SaveStudents(students, "students.json");
+            Util.SaveStudents(students, @"D:\\UPT\\Semida\\CatalogStudenti\\student.json");
+            MessageBox.Show("Student and courses saved.");
             // Clear form and temporary list
             StudentName.Clear();
             BirthDate.Clear();
@@ -303,13 +290,27 @@ namespace CatalogStudenti
 
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
+
             listBoxCourses.Visible = true;
             {
                 string courseName = NumeCurs.Text.Trim();
-                if (!int.TryParse(Nota.Text.Trim(), out int grade) ||
-                    !int.TryParse(NumarCredite.Text.Trim(), out int credits))
+                string notaStr = Nota.Text.Trim();
+                string crediteStr = NumarCredite.Text.Trim();
+                if (string.IsNullOrEmpty(courseName))
                 {
-                    MessageBox.Show("Grade and credits must be numbers.");
+                    MessageBox.Show("Numele cursului trebuie completat.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!int.TryParse(notaStr, out int grade) || grade < 1 || grade > 10)
+                {
+                    MessageBox.Show("Nota trebuie să fie un număr între 1 și 10.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!int.TryParse(crediteStr, out int credits) || credits <= 0)
+                {
+                    MessageBox.Show("Numărul de credite trebuie să fie un număr întreg pozitiv.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -327,6 +328,182 @@ namespace CatalogStudenti
                 NumeCurs.Clear();
                 Nota.Clear();
                 NumarCredite.Clear();
+            }
+        }
+
+        private void SearchText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cautare_Click(object sender, EventArgs e)
+        {
+            string searchTerm = SearchText.Text.Trim();
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                MessageBox.Show("Please enter a student name.");
+                return;
+            }
+            dataGridView1.DataSource = Util.SearchStudent(searchTerm); ;
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            string name = StudentName.Text.Trim();
+            string birthDateStr = BirthDate.Text.Trim();
+            string group = Group.Text.Trim();
+            string courseName = NumeCurs.Text.Trim();
+            int yearOfStudying;
+
+            if (string.IsNullOrWhiteSpace(name) ||
+                string.IsNullOrWhiteSpace(birthDateStr) ||
+                string.IsNullOrWhiteSpace(group) ||
+                string.IsNullOrWhiteSpace(courseName) ||
+                !int.TryParse(YearOfStudying.Text.Trim(), out yearOfStudying) ||
+                !DateTime.TryParse(birthDateStr, out DateTime birthDate))
+            {
+                MessageBox.Show("Please enter valid student details.");
+                return;
+            }
+
+            bool deleted = CatalogStudenti.Utilities.Util.DeleteStudent(
+                @"D:\\UPT\\Semida\\CatalogStudenti\\student.json",
+                name,
+                birthDate,
+                yearOfStudying,
+                group,
+                courseName
+            );
+
+            if (deleted)
+            {
+                MessageBox.Show("Student deleted successfully.");
+                dataGridView1.DataSource = null; // Clear the grid if needed
+            }
+            else
+            {
+                MessageBox.Show("Student not found.");
+            }
+
+            StudentName.Clear();
+            BirthDate.Clear();
+            Group.Clear();
+            NumeCurs.Clear();
+            YearOfStudying.Clear(); 
+        }
+
+        private void SaveMdf_Click(object sender, EventArgs e)
+        {
+            string name = StudentName.Text.Trim();
+            string birthDateStr = BirthDate.Text.Trim();
+            string group = Group.Text.Trim();
+            string courseName = NumeCurs.Text.Trim();
+            string gradeStr = Nota.Text.Trim();
+            string creditsStr = NumarCredite.Text.Trim();
+            string yearStr = YearOfStudying.Text.Trim();
+          
+
+            // Verifică dacă toate câmpurile sunt completate
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(birthDateStr) ||
+                string.IsNullOrEmpty(yearStr) || string.IsNullOrEmpty(group))
+            {
+                MessageBox.Show("Toate câmpurile studentului trebuie completate.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validare dată naștere
+            if (!DateTime.TryParse(birthDateStr, out DateTime birthDate))
+            {
+                MessageBox.Show("Data nașterii nu este într-un format valid (ex: 2000-01-01).", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validare an studiu
+            if (!int.TryParse(yearStr, out int yearOfStudying) || yearOfStudying <= 0)
+            {
+                MessageBox.Show("Anul de studiu trebuie să fie un număr întreg pozitiv.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validate inputs
+
+            //int yearOfStudying;
+            if (string.IsNullOrWhiteSpace(name) ||
+                string.IsNullOrWhiteSpace(birthDateStr) ||
+                string.IsNullOrWhiteSpace(group) ||
+                string.IsNullOrWhiteSpace(courseName) ||
+                !int.TryParse(YearOfStudying.Text.Trim(), out yearOfStudying) ||
+                !int.TryParse(gradeStr, out int grade) ||
+                !int.TryParse(creditsStr, out int credits))
+            {
+                MessageBox.Show("Please enter valid data in all fields.");
+                return;
+            }
+
+            bool modified = CatalogStudenti.Utilities.Util.ModifyStudent(
+               @"D:\\UPT\\Semida\\CatalogStudenti\\student.json",
+                name,
+                birthDate,
+                yearOfStudying,
+                group,
+                courseName,
+                grade,
+                credits
+            );
+
+            if (modified)
+            {
+                MessageBox.Show("Student information updated successfully.");
+                dataGridView1.DataSource = null; // optionally refresh the grid
+            }
+            else
+            {
+                MessageBox.Show("Student not found.");
+            }
+        }
+
+        private void StudentName_TextChanged(object sender, EventArgs e)
+        {
+            string input = StudentName.Text.Trim();
+
+            // Regex: First letter uppercase, rest lowercase letters (can be adjusted for more complex names)
+            bool isValid = Regex.IsMatch(input, @"^[A-Z][a-zA-Z]*$");
+
+            if (!isValid)
+            {
+                StudentName.BackColor = Color.LightCoral;
+                MessageBox.Show("Nume Invalid.");
+                //StudentName.Clear(); // Clear the input if invalid
+            }
+            else
+            {
+                StudentName.BackColor = Color.White; // Reset background when valid
+            }
+        }
+
+        private void BirthDate_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void BirthDate_Leave(object sender, EventArgs e)
+        {
+            string input = BirthDate.Text.Trim();
+            string pattern = @"^(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$";
+
+            bool isFormatValid = Regex.IsMatch(input, pattern);
+            bool isDateValid = DateTime.TryParseExact(input, "yyyy-MM-dd",
+                                   CultureInfo.InvariantCulture,
+                                   DateTimeStyles.None, out _);
+
+            if (!isFormatValid || !isDateValid)
+            {
+                BirthDate.BackColor = Color.LightCoral;
+                MessageBox.Show("Data nasterii este invalida.");
+            }
+            else
+            {
+                BirthDate.BackColor = Color.White;
             }
         }
     }

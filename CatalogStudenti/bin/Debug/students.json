@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Gica",
+    "Birthdate": "1234-12-11T00:00:00",
+    "YearOfStudying": 3,
+    "Group": "A",
+    "Courses": [
+      {
+        "CourseName": "Aritmeitca",
+        "Grade": 4,
+        "CreditNumber": 2
+      }
+    ]
+  }
+]

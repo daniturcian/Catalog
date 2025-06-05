@@ -1,0 +1,16 @@
+D:\UPT\Semida\CatalogStudenti\obj\Debug\CatalogStudenti.csproj.AssemblyReference.cache
+D:\UPT\Semida\CatalogStudenti\obj\Debug\CatalogStudenti.Form1.resources
+D:\UPT\Semida\CatalogStudenti\obj\Debug\CatalogStudenti.Properties.Resources.resources
+D:\UPT\Semida\CatalogStudenti\obj\Debug\CatalogStudenti.csproj.GenerateResource.cache
+D:\UPT\Semida\CatalogStudenti\obj\Debug\CatalogStudenti.csproj.CoreCompileInputs.cache
+D:\UPT\Semida\CatalogStudenti\bin\Debug\CatalogStudenti.exe.config
+D:\UPT\Semida\CatalogStudenti\bin\Debug\CatalogStudenti.exe
+D:\UPT\Semida\CatalogStudenti\bin\Debug\CatalogStudenti.pdb
+D:\UPT\Semida\CatalogStudenti\obj\Debug\CatalogStudenti.exe
+D:\UPT\Semida\CatalogStudenti\obj\Debug\CatalogStudenti.pdb
+D:\UPT\Semida\CatalogStudenti\bin\Debug\auth.txt
+D:\UPT\Semida\CatalogStudenti\bin\Debug\student.txt
+D:\UPT\Semida\CatalogStudenti\bin\Debug\Newtonsoft.Json.dll
+D:\UPT\Semida\CatalogStudenti\bin\Debug\Newtonsoft.Json.xml
+D:\UPT\Semida\CatalogStudenti\obj\Debug\CatalogS.835D410A.Up2Date
+D:\UPT\Semida\CatalogStudenti\bin\Debug\student.json
